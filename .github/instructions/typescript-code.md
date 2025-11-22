@@ -15,7 +15,7 @@ TypeScript is used for GitHub Actions in the `.github/actions/` directory.
 
 - **prettier**: Primary formatter for TypeScript
 - Configuration uses default Prettier settings
-- Run `npm run format-yaml` for YAML or use `make format` for all code
+- Run `make format` to format all code
 
 ### Linting
 
