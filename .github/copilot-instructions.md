@@ -134,9 +134,9 @@ PR titles must follow [Conventional Commits](https://www.conventionalcommits.org
 - `style:` - Coding style or format changes
 - `build:` - Build system changes
 - `ci:` - CI/CD configuration changes
-- `perf:` - Performance improvements
 - `revert:` - Reverting previous changes
 - `test:` - Adding or correcting tests
+- `break:` - Breaking changes
 
 See `.github/pr-title-checker-config.json` for full configuration.
 
@@ -202,7 +202,7 @@ New PRs with new functionality should include automated tests for that functiona
 
 ## GitHub Actions Dependencies
 
-When `renovate-bot` updates `package.json`/`package-lock.json`, you must recompile packages into `.js` files using the [Update actions dist post-commit](../.github/workflows/update-actions-dist-post-commit.yml) workflow:
+When `renovate-bot` updates `package.json`/`package-lock.json`, you must recompile packages into `.js` files using the [Update actions dist post-commit](workflows/update-actions-dist-post-commit.yml) workflow:
 
 ```bash
 gh workflow run update-actions-dist-post-commit.yml -F pr_number=<pull request number>
