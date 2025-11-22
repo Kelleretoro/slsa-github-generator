@@ -202,7 +202,7 @@ New PRs with new functionality should include automated tests for that functiona
 
 ## GitHub Actions Dependencies
 
-When `renovate-bot` updates `package.json`/`package-lock.json`, you must recompile packages into `.js` files using the [Update actions dist post-commit](workflows/update-actions-dist-post-commit.yml) workflow:
+When `renovate-bot` updates `package.json`/`package-lock.json`, you must recompile packages into `.js` files using the [Update actions dist post-commit](.github/workflows/update-actions-dist-post-commit.yml) workflow:
 
 ```bash
 gh workflow run update-actions-dist-post-commit.yml -F pr_number=<pull request number>
